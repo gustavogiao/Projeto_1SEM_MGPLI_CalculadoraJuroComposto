@@ -1,0 +1,287 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Estilos para os cabeçalhos */
+h1 {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para os links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para os botões */
+.bar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    padding-top: 10px;
+    z-index: 1;
+}
+
+.logo {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 35px;
+}
+
+/* Estilos para os botões da barra */
+.botoes {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.botao {
+    background-color: #4CAF50;
+    border: 2px solid white;
+    border-radius: 20px; /* Borda arredondada */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo de hover para os botões da barra */
+.botao:hover {
+    background-color: #45a049; /* Tom mais escuro ao passar o mouse */
+    border: 2px solid #45a049;
+}
+
+.botao1 {
+    background-color: #2196F3;
+    color: white;
+    border: 2px solid #1565c0;
+}
+
+.botao2 {
+    background-color: #ff9800;
+    color: white;
+    border: 2px solid #e65100;
+}
+
+/* Estilo de hover para os botões de calculadoras */
+.botao1:hover,
+.botao2:hover {
+    background-color: #007bb5; /* Tom mais escuro ao passar o mouse */
+    border: 2px solid #007bb5;
+}
+
+
+.imagem {
+    margin-top: 85px;
+    width: 100%;
+    z-index: -1;
+}
+
+.titulo {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.titulo1 {
+    position: absolute;
+    font-size: 750%;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    margin-top: -35%;
+    margin-left: 21.5%;
+}
+
+.subtitulo {
+    position: absolute;
+    color: white;
+    font-size: 160%;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: -27%;
+    margin-left: 29%;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+.simuladores {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button1,
+.button2,
+.button {
+    background-color: rgb(77, 77, 77);
+    border: none;
+    color: white;
+    padding: 4.5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button {
+    margin-left: 20px;
+}
+
+.rodape {
+    overflow: hidden;
+    background-color: rgb(77, 77, 77);
+    position: relative;
+    bottom: 0;
+    width: 96.8%;
+    color: white;
+    padding: 30px;
+}
+
+.textorodape {
+    font-size: 400%;
+    margin-left: 39%;
+    font-family: sans-serif;
+    margin-top: 0%;
+    position: absolute;
+}
+
+.textorodape1 {
+    font-size: 90%;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.topo {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 43.5%;
+    margin-top: 20px;
+}
+
+
+section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .formula-container {
+    width: 45%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .card-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fundo preto */
+    color: white;
+    /* Texto branco */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-link:hover .hover-text {
+    opacity: 1;
+}
+
+footer{
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .botao {
+        width: 100%;
+    }
+
+    .titulo img {
+        height: auto;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+
+.instagram{
+    float: right;
+}
+
+#video-container {
+    display: flex;
+    justify-content: center;
+}
+
+#video-container iframe {
+    margin: 0 10px; 
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black; 
+    color: white;
+    text-align: center;
+  }
+  
+  

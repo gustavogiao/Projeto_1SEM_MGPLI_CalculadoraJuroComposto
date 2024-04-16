@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Juros</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header style="padding: 50px; padding-top: 40px">
+        <div class="logo">
+            <a href="../index.html"><img style="margin-top: 20px;" src="../img/logo.png" height="90px" width="90px"></a>
+         </div>
+        <h1>Simulador de Juros Compostos - Reforços Mensais Necessários</h1>
+    </header>
+    <div id="exportContent">
+        <div class="conteiner">
+            <section class="layout">
+                <div class="entradas">
+                    <label for="valorInicial">Valor inicial</label>
+                    <div class="campo">
+                        <div class="prefixo"><b>€</b></div>
+                        <input type="number" name="valorInicial" id="valorInicial" placeholder="0.00" />
+                    </div>
+
+                    <label for="valorDesejado">Valor Desejado</label>
+                    <div class="campo">
+                        <div class="prefixo"><b>€</b></div>
+                        <input type="number" name="valorDesejado" id="valorDesejado" placeholder="0.00" />
+                    </div>
+
+                    <label for="juros">Taxa de juros mensal</label>
+                    <div class="campo">
+                        <div class="prefixo"><b>%</b></div>
+                        <input type="number" name="juros" id="juros" placeholder="0%" />
+                    </div>
+
+                    <label for="meses">Meses</label>
+                    <div class="campo">
+                        <div class="prefixo"><b>M</b></div>
+                        <input type="number" name="meses" id="meses" placeholder="0" />
+                    </div>
+                    <label for="anos">Anos</label>
+                    <div class="campo">
+                        <div class="prefixo"><b>A</b></div>
+                        <input type="number" name="anos" id="anos" placeholder="0" />
+                    </div>
+                    <button class="botao" id="calcular"><b>CALCULAR</b></button>
+                    <button class="botao" id="reset"><b>ANULAR</b></button>
+                    <div class="export-dropdown">
+                        <label for="exportOptions">Exportar como:</label>
+                        <select id="exportOptions">
+                            <option value="csv">CSV</option>
+                            <option value="json">JSON</option>
+                            <option value="pdf">PDF</option>
+                        </select>
+                        <button class="botao2" id="exportButton"><b>EXPORTAR</b></button>
+                    </div>
+                    <br>
+                    <div class="social-buttons" style="padding-left: 35px ;">
+                        <button class="facebook-button" onclick="shareOnFacebook()">
+                            <i class="fab fa-facebook" style="font-size: 20px;"></i>
+                        </button>
+                        <button class="twitter-button" onclick="shareOnTwitter()">
+                            <i class="fab fa-twitter" style="font-size: 20px;"></i>
+                        </button>
+                        <button class="whatsapp-button" onclick="shareOnWhatsApp()">
+                            <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="resultados">
+                    <h2>Resultados</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Reforço Mensal</h4>
+                            <div class="valor-resultado" id="resultadoReforcos"><b>€0.00</b></div>
+                        </div>
+                        <div class="card">
+                            <h4>Total Investido</h4>
+                            <div class="valor-resultado" id="resultadoTotalInvestido"><b>€0.00</b></div>
+                        </div>
+                        <div class="card">
+                            <h4>Juros Totais</h4>
+                            <div class="valor-resultado" id="resutaldoTotalJuros"><b>€0.00</b></div>
+                        </div>
+                    </div><br>
+                    <div id="chart">
+                        <canvas id="myChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </section>
+            <section style="overflow-x: auto;">
+                <table id="display" class="listaResultado">
+                    <tr>
+                        <th class="table-th-1">Mês</th>
+                        <th class="table-th-2">Reforço Mensal</th>
+                        <th class="table-th-3">Montante Acumulado</th>
+                        <th class="table-th-4">Juros Mensais</th>
+                        <th class="table-th-5">Juro Acumulado</th>
+                    </tr>
+                    <tr>
+                        <td> 0 </td>
+                        <td> €0.00 </td>
+                        <td> €0.00 </td>
+                        <td> €0.00 </td>
+                        <td> €0.00 </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+    <script src="script4.js"></script>
+</body>

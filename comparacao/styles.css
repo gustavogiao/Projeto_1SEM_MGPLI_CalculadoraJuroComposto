@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.calculator {
+    flex: 1;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+.add-simulator-btn {
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Espaço entre o botão e os simuladores */
+    background-color: black;
+    border: none;
+    color: white;
+    height: 3rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    position: relative;
+    z-index: 0;
+    transition: .3s;
+    display: block;
+}
+
+.add-simulator-btn:hover {
+    background-color: orange;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+
+}
+
+

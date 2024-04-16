@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Cash - Educação Financeira</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="CalculadoraDeJuroComposto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <div class="bar">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" height="90px"></a>
+        </div>
+        <div class="botoes">
+            <a href="index.html"><button class="botao botao2">Home</button></a>
+            <a href="index.html?scrollToCalculadoras=true"><button class="botao botao2">Simuladores</button></a>
+            <a href="/comparacao/comparacao.html"><button class="botao botao2">Comparação de Simuladores</button></a>
+            <a href="educacao.html"><button class="botao botao1">Educação Financeira</button></a>
+            <a href="faq.html"><button class="botao botao2">FAQ</button> </a>
+            <a href="https://www.instagram.com/capital_cash__/"><img class="instagram" src="img/instagram.png"
+                    height="40px"></img></a>
+        </div>
+    </div>
+    <div class="titulo">
+        <img class="imagem" src="img/banner3.jpg" alt="">
+    </div>
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: 100;">
+                    <img src="img/post1.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 100;">
+                    <img src="img/post2.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 100;">
+                    <img src="img/post3.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1 style="font-family: 'Montserrat', sans-serif; color: black;"> Como funciona a fórmula de juros compostos?</h1>
+    <section>
+        <div class="formula-container">
+            <h2>Fórmula de Juros Compostos</h2>
+            <p>A fórmula para calcular o montante acumulado com juros compostos é:</p>
+            <p>\[ M = P \left(1 + \frac{r}{n}\right)^{nt} \]</p>
+            <p>onde:</p>
+            <ul>
+                <li>\( M \) = Montante acumulado</li>
+                <li>\( P \) = Principal (capital inicial)</li>
+                <li>\( r \) = Taxa de juros anual (em decimal)</li>
+                <li>\( n \) = Número de vezes que o juro é composto por ano</li>
+                <li>\( t \) = Número de anos</li>
+            </ul>
+        </div>
+
+        <div class="formula-container">
+            <h2>Fórmula de Juros Compostos com Reforços Mensais</h2>
+            <p>A fórmula para calcular o montante acumulado com reforços mensais é:</p>
+            <p>\[ M = P \left(1 + \frac{r}{n}\right)^{nt} + PMT \left(\frac{\left(1 + \frac{r}{n}\right)^{nt} -
+                1}{\frac{r}{n}}\right) \]</p>
+            <p>onde:</p>
+            <ul>
+                <li>\( M \) = Montante acumulado</li>
+                <li>\( P \) = Principal (capital inicial)</li>
+                <li>\( r \) = Taxa de juros anual (em decimal)</li>
+                <li>\( n \) = Número de vezes que o juro é composto por ano</li>
+                <li>\( t \) = Número de anos</li>
+                <li>\( PMT \) = Pagamento mensal adicional</li>
+            </ul>
+        </div>
+    </section>
+    <img src="img/juro_composto.png" height="1000px" class="d-block mx-auto">
+    <h1 style="font-family: 'Montserrat', sans-serif; color: black;">Recursos Adicionais</h1>
+    <br>
+    <div id="video-container">
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/jTW777ENc3c" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/gpuoG7YTnpM?si=kb61LkpJe1qW0qa1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/lNK95khKvSk?si=jjgv-PjcJmzkCEuS"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <br>
+    <footer class="text-center text-white">
+        <div class="text-center text-white p-3">
+            © 2024 Copyright:
+            <a class="text-white">Capital Cash</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+</body>
+
+</html>
